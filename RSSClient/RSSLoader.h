@@ -20,6 +20,7 @@
 @interface RSSLoader : NSObject <NSURLConnectionDataDelegate, RSSParserDelegate>
 
 @property (nonatomic, assign) id<RSSLoaderDelegate> delegate;
+@property (nonatomic, strong) NSURLConnection *connection;
 
 - (id)initWithURLString:(NSString *)urlString;
 

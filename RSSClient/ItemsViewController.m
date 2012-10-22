@@ -34,6 +34,7 @@
         _items = [NSArray new];
         _loader = [[RSSLoader alloc] initWithURLString:urlString];
         _loader.delegate = self;
+        [_loader.connection start];
     }
     
     return self;

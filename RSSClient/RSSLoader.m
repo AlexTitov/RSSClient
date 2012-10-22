@@ -11,7 +11,6 @@
 @interface RSSLoader()
 
 @property (nonatomic, strong) NSMutableData *rssData;
-@property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) RSSParser *rssparser;
 
 @end
@@ -19,8 +18,8 @@
 @implementation RSSLoader
 
 @synthesize delegate = _delegate;
-@synthesize rssData = _rssData;
 @synthesize connection = _connection;
+@synthesize rssData = _rssData;
 @synthesize rssparser = _rssparser;
 
 - (id)initWithURLString:(NSString *)urlString
@@ -29,11 +28,11 @@
     
     if (self) {
         _rssData = [NSMutableData new];
-//        _rssparser = [RSSParser new];
-//        _rssparser.delegate = self;
+        _rssparser = [RSSParser new];
+        _rssparser.delegate = self;
         NSURL *url = [NSURL URLWithString:urlString];
         NSURLRequest *request = [[[NSURLRequest alloc] initWithURL:url] autorelease];
-        _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+        _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
     }
     
     return self;
@@ -49,8 +48,8 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    _rssparser = [RSSParser new];
-    _rssparser.delegate = self;
+//    _rssparser = [RSSParser new];
+//    _rssparser.delegate = self;
     [_rssparser parseWithData:_rssData];
 }
 

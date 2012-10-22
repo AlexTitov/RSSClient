@@ -83,7 +83,7 @@
         item.link = _currentLink;
         item.pubDate = _currentPubDate;
         [_items addObject:item];
-        [item release];
+//        [item release];
         
         [_currentElement release];
         [_currentTitle release];
