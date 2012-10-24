@@ -34,7 +34,6 @@
         _items = [NSArray new];
         _loader = [[RSSLoader alloc] initWithURLString:urlString];
         _loader.delegate = self;
-        [_loader.connection start];
     }
     
     return self;
@@ -68,11 +67,20 @@
 }
 
 #pragma mark - 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WebViewController *web = [[[WebViewController alloc] initWithURLString:[[_items objectAtIndex:indexPath.row] link]] autorelease];
+    [self.navigationController pushViewController:web animated:YES];
+}
+
+#pragma mark - 
 #pragma mark - RSSLoaderDelegate
 
 - (void)RSSLoader:(RSSLoader *)loader didLoadItems:(NSArray *)items
 {
-    _items = [items retain];
+    _items = items;
     [self.tableView reloadData];
 }
 

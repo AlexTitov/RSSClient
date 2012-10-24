@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ItemsViewController.h"
+#import "AddViewController.h"
 
-@interface FeedsViewController : UITableViewController
+@interface FeedsViewController : UITableViewController <AddViewControllerDelegate>
 
 @end

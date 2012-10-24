@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AE6F2D16382B3800CF34A3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE6F2C16382B3100CF34A3 /* AddViewController.m */; };
+		04AE6F2E16382B3800CF34A3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE6F2C16382B3100CF34A3 /* AddViewController.m */; };
+		04B6D86516372BFD008CFE74 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6D86416372BFD008CFE74 /* WebViewController.m */; };
+		04B6D86616372BFD008CFE74 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6D86416372BFD008CFE74 /* WebViewController.m */; };
 		04D571B516330ADD00006449 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B416330ADD00006449 /* UIKit.framework */; };
 		04D571B716330ADD00006449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B616330ADD00006449 /* Foundation.framework */; };
 		04D571B916330ADD00006449 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B816330ADD00006449 /* CoreGraphics.framework */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04AE6F2B16382B2B00CF34A3 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		04AE6F2C16382B3100CF34A3 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		04B6D86316372BFC008CFE74 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		04B6D86416372BFD008CFE74 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		04D571B016330ADD00006449 /* RSSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D571B416330ADD00006449 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04D571B616330ADD00006449 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,8 +138,12 @@
 				04D571C416330ADD00006449 /* RSSClientAppDelegate.m */,
 				04D571E316330BF200006449 /* FeedsViewController.h */,
 				04D571E416330BF200006449 /* FeedsViewController.m */,
+				04AE6F2B16382B2B00CF34A3 /* AddViewController.h */,
+				04AE6F2C16382B3100CF34A3 /* AddViewController.m */,
 				04D571E71633150A00006449 /* ItemsViewController.h */,
 				04D571E81633150A00006449 /* ItemsViewController.m */,
+				04B6D86316372BFC008CFE74 /* WebViewController.h */,
+				04B6D86416372BFD008CFE74 /* WebViewController.m */,
 				04D571EB1633196200006449 /* RSSLoader.h */,
 				04D571EC1633196200006449 /* RSSLoader.m */,
 				04D571EF163319AD00006449 /* RSSParser.h */,
@@ -285,6 +297,8 @@
 				04D571ED1633196300006449 /* RSSLoader.m in Sources */,
 				04D571F1163319AD00006449 /* RSSParser.m in Sources */,
 				04D571F5163319DB00006449 /* RSSItem.m in Sources */,
+				04B6D86516372BFD008CFE74 /* WebViewController.m in Sources */,
+				04AE6F2D16382B3800CF34A3 /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +312,8 @@
 				04D571EE1633196300006449 /* RSSLoader.m in Sources */,
 				04D571F2163319AD00006449 /* RSSParser.m in Sources */,
 				04D571F6163319DB00006449 /* RSSItem.m in Sources */,
+				04B6D86616372BFD008CFE74 /* WebViewController.m in Sources */,
+				04AE6F2E16382B3800CF34A3 /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +465,7 @@
 				04D571DF16330ADF00006449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04D571E016330ADF00006449 /* Build configuration list for PBXNativeTarget "RSSClientTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +474,7 @@
 				04D571E216330ADF00006449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

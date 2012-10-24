@@ -30,9 +30,10 @@
         _rssData = [NSMutableData new];
         _rssparser = [RSSParser new];
         _rssparser.delegate = self;
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         NSURL *url = [NSURL URLWithString:urlString];
         NSURLRequest *request = [[[NSURLRequest alloc] initWithURL:url] autorelease];
-        _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO];
+        _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
     }
     
     return self;
@@ -48,13 +49,14 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-//    _rssparser = [RSSParser new];
-//    _rssparser.delegate = self;
+    _rssparser = [RSSParser new];
+    _rssparser.delegate = self;
     [_rssparser parseWithData:_rssData];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     NSString *errorString = [NSString stringWithFormat:@"Connection failed: %@", [error localizedDescription]];
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
     [alert show];
@@ -65,6 +67,7 @@
 
 - (void)RSSParser:(RSSParser *)parser didParseItems:(NSArray *)items
 {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [_delegate RSSLoader:self didLoadItems:items];
 }
 

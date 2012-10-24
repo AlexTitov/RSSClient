@@ -32,7 +32,7 @@
         _feeds = [[NSMutableArray alloc] initWithObjects:
                   @"http://www.apple.com/pr/feeds/pr.rss", 
                   @"http://www.3dnews.ru/news/rss",
-                  @"http://www.oszone.net/rss-feed.xml",
+                  @"http://www.overclockers.ru/rss/all.rss",
                   nil];
     }
     
@@ -42,6 +42,14 @@
 - (void)viewDidLoad
 {
     self.navigationItem.title = @"RSS feeds";
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)] autorelease];
+}
+
+- (void)add
+{
+    AddViewController *add = [[[AddViewController alloc] init] autorelease];
+    add.delegate = self;
+    [self.navigationController pushViewController:add animated:YES];
 }
 
 #pragma mark - 
@@ -73,6 +81,15 @@
     ItemsViewController *items = [[[ItemsViewController alloc] initWithStyle:UITableViewStylePlain andURLString:[_feeds objectAtIndex:indexPath.row]] autorelease];
     
     [self.navigationController pushViewController:items animated:YES];
+}
+
+#pragma mark - 
+#pragma mark - AddViewControllerDelegate
+
+- (void)addViewController:(AddViewController *)controller didGetFeed:(NSString *)newFeed
+{
+    [_feeds addObject:newFeed];
+    [self.tableView reloadData];
 }
 
 @end

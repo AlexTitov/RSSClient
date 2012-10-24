@@ -83,17 +83,8 @@
         item.link = _currentLink;
         item.pubDate = _currentPubDate;
         [_items addObject:item];
-//        [item release];
-        
-        [_currentElement release];
-        [_currentTitle release];
-        [_currentLink release];
-        [_currentPubDate release];
+        [item release];
     }
-    
-//    if ([elementName isEqualToString:@"channel"]) {
-//        [_delegate RSSParser:self didParseItems:_items];
-//    }
 }
 
 @end

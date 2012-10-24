@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RSSLoader.h"
+#import "WebViewController.h"
 
 @interface ItemsViewController : UITableViewController <RSSLoaderDelegate>
 
