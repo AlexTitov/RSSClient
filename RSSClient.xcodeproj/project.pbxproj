@@ -11,6 +11,8 @@
 		04AE6F2E16382B3800CF34A3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE6F2C16382B3100CF34A3 /* AddViewController.m */; };
 		04B6D86516372BFD008CFE74 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6D86416372BFD008CFE74 /* WebViewController.m */; };
 		04B6D86616372BFD008CFE74 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B6D86416372BFD008CFE74 /* WebViewController.m */; };
+		04C5CEAB163B210C009DFF6C /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C5CEAA163B210C009DFF6C /* libKiwi.a */; };
+		04C5CEB1163B237C009DFF6C /* RSSClientSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C5CEB0163B237C009DFF6C /* RSSClientSpecs.m */; };
 		04D571B516330ADD00006449 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B416330ADD00006449 /* UIKit.framework */; };
 		04D571B716330ADD00006449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B616330ADD00006449 /* Foundation.framework */; };
 		04D571B916330ADD00006449 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B816330ADD00006449 /* CoreGraphics.framework */; };
@@ -21,7 +23,6 @@
 		04D571CE16330ADE00006449 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B416330ADD00006449 /* UIKit.framework */; };
 		04D571CF16330ADE00006449 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D571B616330ADD00006449 /* Foundation.framework */; };
 		04D571D716330ADF00006449 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04D571D516330ADF00006449 /* InfoPlist.strings */; };
-		04D571DA16330ADF00006449 /* RSSClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D571D916330ADF00006449 /* RSSClientTests.m */; };
 		04D571E516330BF200006449 /* FeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D571E416330BF200006449 /* FeedsViewController.m */; };
 		04D571E616330BF200006449 /* FeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D571E416330BF200006449 /* FeedsViewController.m */; };
 		04D571E91633150B00006449 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D571E81633150A00006449 /* ItemsViewController.m */; };
@@ -49,6 +50,8 @@
 		04AE6F2C16382B3100CF34A3 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		04B6D86316372BFC008CFE74 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		04B6D86416372BFD008CFE74 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		04C5CEAA163B210C009DFF6C /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "lib/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		04C5CEB0163B237C009DFF6C /* RSSClientSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSClientSpecs.m; sourceTree = "<group>"; };
 		04D571B016330ADD00006449 /* RSSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D571B416330ADD00006449 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		04D571B616330ADD00006449 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +66,6 @@
 		04D571CC16330ADE00006449 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		04D571D416330ADF00006449 /* RSSClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RSSClientTests-Info.plist"; sourceTree = "<group>"; };
 		04D571D616330ADF00006449 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		04D571D816330ADF00006449 /* RSSClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSClientTests.h; sourceTree = "<group>"; };
-		04D571D916330ADF00006449 /* RSSClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSClientTests.m; sourceTree = "<group>"; };
 		04D571E316330BF200006449 /* FeedsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedsViewController.h; sourceTree = "<group>"; };
 		04D571E416330BF200006449 /* FeedsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedsViewController.m; sourceTree = "<group>"; };
 		04D571E71633150A00006449 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C5CEAB163B210C009DFF6C /* libKiwi.a in Frameworks */,
 				04D571CD16330ADE00006449 /* SenTestingKit.framework in Frameworks */,
 				04D571CE16330ADE00006449 /* UIKit.framework in Frameworks */,
 				04D571CF16330ADE00006449 /* Foundation.framework in Frameworks */,
@@ -123,6 +125,7 @@
 		04D571B316330ADD00006449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04C5CEAA163B210C009DFF6C /* libKiwi.a */,
 				04D571B416330ADD00006449 /* UIKit.framework */,
 				04D571B616330ADD00006449 /* Foundation.framework */,
 				04D571B816330ADD00006449 /* CoreGraphics.framework */,
@@ -169,8 +172,7 @@
 		04D571D216330ADF00006449 /* RSSClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				04D571D816330ADF00006449 /* RSSClientTests.h */,
-				04D571D916330ADF00006449 /* RSSClientTests.m */,
+				04C5CEB0163B237C009DFF6C /* RSSClientSpecs.m */,
 				04D571D316330ADF00006449 /* Supporting Files */,
 			);
 			path = RSSClientTests;
@@ -306,7 +308,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D571DA16330ADF00006449 /* RSSClientTests.m in Sources */,
 				04D571E616330BF200006449 /* FeedsViewController.m in Sources */,
 				04D571EA1633150B00006449 /* ItemsViewController.m in Sources */,
 				04D571EE1633196300006449 /* RSSLoader.m in Sources */,
@@ -314,6 +315,7 @@
 				04D571F6163319DB00006449 /* RSSItem.m in Sources */,
 				04B6D86616372BFD008CFE74 /* WebViewController.m in Sources */,
 				04AE6F2E16382B3800CF34A3 /* AddViewController.m in Sources */,
+				04C5CEB1163B237C009DFF6C /* RSSClientSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,8 +425,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSClient/RSSClient-Prefix.pch";
 				INFOPLIST_FILE = "RSSClientTests/RSSClientTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/lib/Kiwi/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -440,8 +447,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSSClient/RSSClient-Prefix.pch";
 				INFOPLIST_FILE = "RSSClientTests/RSSClientTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/lib/Kiwi/**";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
