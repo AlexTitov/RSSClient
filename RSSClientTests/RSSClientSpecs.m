@@ -1,7 +1,7 @@
 #import "Kiwi.h"
 #import "RSSParser.h"
 
-SPEC_BEGIN(ParserSpecs)
+SPEC_BEGIN(RSSParserSpecs)
 
 describe(@"Unit tests", ^{
     it(@"are very useful", ^{
@@ -13,11 +13,22 @@ describe(@"Unit tests", ^{
 });
 
 describe(@"RSSParser", ^{
-    it(@"is created", ^{
-        RSSParser *parser = [[[RSSParser alloc] init] autorelease];
-        [[parser shouldNot] beNil];
-        [parser shouldNotBeNil];
-        [[parser should] beKindOfClass:[RSSParser class]];
+    
+    __block RSSParser *_parser;
+    
+    beforeEach(^{
+        _parser = [[[RSSParser alloc] init] autorelease];
+    });
+    
+    it(@"can be initialized", ^{
+        [[_parser shouldNot] beNil];
+        [[_parser should] beKindOfClass:[RSSParser class]];
+        [[_parser should] conformToProtocol:@protocol(NSXMLParserDelegate)];
+    });
+    
+    it(@"can parse data", ^{
+        NSData *data = nil;
+        [_parser parseWithData:data];
     });
 });
 

@@ -10,6 +10,8 @@
 
 @interface RSSLoader()
 
+@property (nonatomic, strong) NSString *urlString;
+@property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) NSMutableData *rssData;
 @property (nonatomic, strong) RSSParser *rssparser;
 
@@ -18,6 +20,7 @@
 @implementation RSSLoader
 
 @synthesize delegate = _delegate;
+@synthesize urlString = _urlString;
 @synthesize connection = _connection;
 @synthesize rssData = _rssData;
 @synthesize rssparser = _rssparser;
@@ -30,13 +33,24 @@
         _rssData = [NSMutableData new];
         _rssparser = [RSSParser new];
         _rssparser.delegate = self;
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-        NSURL *url = [NSURL URLWithString:urlString];
-        NSURLRequest *request = [[[NSURLRequest alloc] initWithURL:url] autorelease];
-        _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+        _urlString = urlString;
     }
     
     return self;
+}
+
+- (void)startLoading
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    NSURL *url = [NSURL URLWithString:_urlString];
+    NSURLRequest *request = [[[NSURLRequest alloc] initWithURL:url] autorelease];
+    _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+}
+
+- (void)cancelLoading
+{
+    [_connection cancel];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
 #pragma mark - 
@@ -58,8 +72,7 @@
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     NSString *errorString = [NSString stringWithFormat:@"Connection failed: %@", [error localizedDescription]];
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-    [alert show];
+    [_delegate RSSLoader:self connectionDidFailWithErrorString:errorString];
 }
 
 #pragma mark - 

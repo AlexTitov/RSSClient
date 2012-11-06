@@ -44,6 +44,16 @@
     self.navigationItem.title = @"RSS items";
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [_loader startLoading];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [_loader cancelLoading];
+}
+
 #pragma mark - 
 #pragma mark - UITableViewDataSource
 
@@ -82,6 +92,12 @@
 {
     _items = items;
     [self.tableView reloadData];
+}
+
+- (void)RSSLoader:(RSSLoader *)loader connectionDidFailWithErrorString:(NSString *)errorString
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
 }
 
 @end

@@ -14,14 +14,16 @@
 @protocol RSSLoaderDelegate <NSObject>
 
 - (void)RSSLoader:(RSSLoader *)loader didLoadItems:(NSArray *)items;
+- (void)RSSLoader:(RSSLoader *)loader connectionDidFailWithErrorString:(NSString *)errorString;
 
 @end
 
 @interface RSSLoader : NSObject <NSURLConnectionDataDelegate, RSSParserDelegate>
 
 @property (nonatomic, assign) id<RSSLoaderDelegate> delegate;
-@property (nonatomic, strong) NSURLConnection *connection;
 
 - (id)initWithURLString:(NSString *)urlString;
+- (void)startLoading;
+- (void)cancelLoading;
 
 @end
